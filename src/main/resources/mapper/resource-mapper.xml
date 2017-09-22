@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.mapper.ResourceMapper">
+    <insert id="insertResource" useGeneratedKeys="true" keyProperty="id">
+      INSERT INTO  xiao_yang.resource(planId,address) VALUES (
+      #{planId},
+      #{address})
+    </insert>
+    <select id="findByPlanId" resultType="com.king.model.Resource">
+        SELECT * FROM resource WHERE planId=#{id}
+    </select>
+    <select id="findByIdAndPlanId" resultType="com.king.model.Resource">
+        SELECT * FROM resource WHERE planId=#{planId} AND id=#{id}
+    </select>
+    <update id="updateResource">
+        UPDATE resource SET address=#{address} WHERE id=#{id} AND planId=#{planId}
+    </update>
+    <delete id="deleteResource">
+        DELETE FROM resource WHERE id=#{id} OR planId=#{planId}
+    </delete>
+
+</mapper>

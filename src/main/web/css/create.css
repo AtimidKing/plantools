@@ -1,0 +1,151 @@
+body,
+div,
+input,
+ul,
+li,
+textarea,
+button,
+a,
+img,
+table {
+    margin: 0;
+    padding: 0;
+}
+
+input,
+button,
+select,
+textarea {
+    outline: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.container {
+    min-width: 750px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/*导航  */
+
+.nav {
+    width: 70%;
+    height: 50px;
+    margin: 0px auto;
+}
+
+.nav ul {
+    list-style: none;
+    display: block;
+}
+
+.nav li {
+    line-height: 50px;
+    float: left;
+    margin: 0px 10px;
+}
+
+.nav li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #D3D3D3;
+}
+
+.nav li a:hover {
+    color: #333;
+}
+.nav li:nth-of-type(2) a{
+    color: #333;
+}
+/* add-plan */
+
+.add-plan {
+    width: 70%;
+    margin: 0px auto;
+    min-width: 900px;
+    color: Gray;
+}
+
+.form-control {
+
+    width: 100%;
+    font-size: 18px;
+    border-style: none;
+}
+
+
+.form-group {
+    margin-top: 10px;
+}
+
+.form-group label {
+    font-size: 20px;
+}
+
+.control {
+    display: inline-block;
+    border: 1px solid Silver;
+    border-radius: 5px;
+    margin-top: 10px;
+    line-height: 40px;
+    width: 70%;
+}
+
+.control-textarea {
+    height: 500px;
+    width: 100%;
+    padding: 5px;
+}
+
+.control-textarea textarea {
+    height: 99%;
+    width: 80%;
+    margin: 0px;
+    padding: 0px;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+.add-plan .form-group button {
+    border-style: none;
+    border-color: #088ef0;
+    background: linear-gradient(#34a5f8, #088ef0);
+    color: #FFF;
+    border-style: solid;
+    border-width: 1px;
+    line-height: 38px;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 200px;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    height: 40px;
+    padding: 0 40px;
+    display: inline-block;
+    transition-property: all;
+    transition-duration: .3s;
+}
+
+.add-plan .form-group button:active {
+    border-color: #0880d7;
+    background: #2798eb;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 1px 0px white;
+    color: #0880d7;
+}
+
+
+.add-plan .form-group button:visited {
+    color: #666;
+}
+
+.add-plan .form-group button:focus {
+    border-style: none;
+}

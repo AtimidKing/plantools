@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Set Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body>
+<table>
+    <tr th:each="resource:${resourceList}">
+        <td th:text="${resource.getAddress()}">name</td>
+        <td><a th:href="@{'/resource/download/'+${resource.address}(id=${resource.id},
+        planId=${resource.planId})}">下载</a></td>
+    </tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<a th:href="@{/create}">创建计划</a>
+<table>
+    <tr>
+        <th>编号</th>
+        <th>标题</th>
+        <th>日期</th>
+        <th>状态</th>
+    </tr>
+        <!--/*@thymesVar id="plans" type="java.util.List<Plan>"*/-->
+        <tr th:each="plan:${plans}">
+            <!--/*@thymesVar id="id" type="com.king.model.Plan"*/-->
+            <td th:text="${plan.id}" hidden></td>
+            <!--/*@thymesVar id="title" type="com.king.model.Plan"*/-->
+            <td th:text="${plan.title}"></td>
+            <!--/*@thymesVar id="date" type="com.king.model.Plan"*/-->
+            <td th:text="${plan.date}"></td>
+            <td th:text="${plan.status}"></td>
+            <td><a href="/modify?id=${plan.id}" th:href="@{/modify}">修改</a></td>
+            <td><a href="/delete?id=${plan.id}">删除</a></td>
+            <td><a href="#" th:href="@{/resource/list(id=${plan.id})}">资源</a> </td>
+        </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,15 @@
+CREATE TABLE `plan`(
+  `id` BIGINT(22) NOT NULL COMMENT '计划编号',
+  `title` VARCHAR(50) NOT NULL COMMENT '标题',
+  `detail` TEXT NULL COMMENT '详情',
+  `date` DATE NOT NULL COMMENT '时间',
+  `status` INT NOT NULL COMMENT '状态',
+  PRIMARY KEY (`id`)
+)ENGINE InnoDB DEFAULT CHARSET =utf8;
+
+CREATE TABLE `resource`(
+  `id` BIGINT AUTO_INCREMENT NOT NULL COMMENT '资源编号',
+  `planId` BIGINT(22) NOT NULL COMMENT '计划编号',
+  `address` VARCHAR(200) NOT NULL COMMENT '资源地址',
+  PRIMARY KEY (`id`)
+)ENGINE InnoDB DEFAULT CHARSET =utf8;
