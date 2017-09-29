@@ -1,0 +1,19 @@
+# Created by .ignore support plugin (hsz.mobi)
+*.class
+*.log
+*.ctxt
+.mtj.tmp/
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+target/
+hs_err_pid*
+
+.idea
+src/main/web/images/
+src/main/web/js/
+src/main/web/temp/
+src/main/webapp/
